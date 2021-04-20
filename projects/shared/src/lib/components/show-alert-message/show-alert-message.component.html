@@ -1,0 +1,17 @@
+<div
+  class="alert alert-danger alert-dismissible show"
+  role="alert"
+  *ngIf="errorMessage && errorMessage !== ''"
+  id="errorMsg">
+  <div class="center h-100">
+    <span class="error-text">{{ errorMessage }}</span>
+    <span
+      aria-hidden="true"
+      class="dismiss-icon"
+      data-dismiss="alert"
+      aria-label="Close"
+      (click)="removeErrorMessage()">
+      <mat-icon id="closeIcon"> {{ icon.CLOSE }} </mat-icon>
+    </span>
+  </div>
+</div>

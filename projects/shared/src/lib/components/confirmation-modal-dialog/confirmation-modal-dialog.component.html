@@ -1,0 +1,32 @@
+<mat-card fxLayoutGap>
+  <span
+    aria-hidden="true"
+    class="dismiss-icon"
+    data-dismiss="alert"
+    aria-label="Close"
+    [mat-dialog-close]="false"
+    ><mat-icon>{{ icon.CLOSE }}</mat-icon></span>
+  <p mat-dialog-title class="confirmation-title">
+    <span class="glyphicon glyphicon-warning-sign"></span>
+    {{ data.title }}
+  </p>
+
+  <p display-2 class="confirmation-text">{{ data.message }}</p>
+
+  <div mat-dialog-actions class="dialog-options">
+    <lib-ms-button
+      style="margin-right: 1rem;"
+      mode="secondary"
+      size="s"
+      type="button"
+      (click)="onLeave()">
+      Leave this page
+    </lib-ms-button>
+    <lib-ms-button
+      size="s"
+      type="button"
+      (click)="onStay()">
+      Stay on this page
+    </lib-ms-button>
+  </div>
+</mat-card>

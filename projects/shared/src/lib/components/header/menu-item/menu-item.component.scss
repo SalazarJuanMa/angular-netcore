@@ -1,0 +1,36 @@
+@import "../../../../../../../styles/app-all.scss";
+
+.nav-item {
+  font-size: 15px;
+  height: 100%;
+  padding: 10px;
+  margin: 0px 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.nav-item:hover {
+  background-color: $app-primary-color;
+  color: #ffffff;
+}
+
+::ng-deep .mat-menu-item:hover {
+  background-color: $app-primary-color !important;
+  color: #ffffff;
+}
+  
+
+::ng-deep .mat-menu-panel {
+  border: 1px solid $app-primary-variant;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+::ng-deep .mat-menu-content {
+  padding: 0 !important;
+}
+
+.mat-elevation-z4 {
+  border: none;
+  box-shadow: none;
+}

@@ -1,0 +1,20 @@
+<span class="nav-item-container">
+  <span
+    class="nav-item"
+    [matMenuTriggerFor]="menu"
+    mat-button
+    #menuTrigger="matMenuTrigger"
+    (mouseenter)="mouseEnter(menuTrigger)"
+    (mouseleave)="mouseLeave(menuTrigger)"
+  >
+    <ng-content select="[trigger]"></ng-content>
+  </span>
+  <mat-menu #menu="matMenu" [hasBackdrop]="false">
+    <span
+      (mouseenter)="mouseEnter(menuTrigger)"
+      (mouseleave)="mouseLeave(menuTrigger)"
+    >
+      <ng-content select="[content]"></ng-content>
+    </span>
+  </mat-menu>
+</span>

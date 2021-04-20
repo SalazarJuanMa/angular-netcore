@@ -1,0 +1,46 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "outDir": "./build/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "tools": [
+        "build/tools"
+      ],
+      "tools/*": [
+        "build/tools/*"
+      ],
+      "vendors": [
+        "build/vendors",
+      ],
+      "vendors/*": [
+        "build/vendors/*",
+      ],
+      "interfaces": [
+        "build/interfaces"
+      ],
+      "interfaces/*": [
+        "build/interfaces/*"
+      ],
+      "shared": [
+        "build/shared"
+      ],
+      "shared/*": [
+        "build/shared/*"
+      ]
+    }
+  }
+}

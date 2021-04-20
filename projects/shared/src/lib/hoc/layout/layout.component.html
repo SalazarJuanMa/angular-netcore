@@ -1,0 +1,11 @@
+<lib-header [isGeneralInfoForm]="isGeneralInfoForm"></lib-header>
+<app-loading-spinner></app-loading-spinner>
+<app-side-nav>
+  <div [ngClass]="showHeader ? 'component-view' : ''" content>
+    <div [ngClass]="showHeader ? 'content-view' : ''">
+      <app-page-error-message></app-page-error-message>
+      <ng-content></ng-content>
+    </div>
+    <lib-footer></lib-footer>
+  </div>
+</app-side-nav>

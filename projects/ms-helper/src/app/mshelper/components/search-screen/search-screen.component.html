@@ -1,0 +1,42 @@
+<div class="container-fluid mt-5">
+  <div class="mx-4">
+    <div class="row">
+      <a href="">
+        <mat-icon  class="d-sm-none d-md-block heading-icon mr-4 btn-icon" >
+          keyboard_arrow_left
+          </mat-icon>
+        </a>
+      <div>
+        <h2 class="d-none d-sm-block pt-1 m-0">Data Helper</h2>
+        <p>Search for the value that you need.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-card">
+    <h3 class="d-none d-sm-block pt-1 font-weight-bold m-0">Search Data</h3>
+    <p>Use some value to search.</p>
+    <span class="warn-text" [ngClass]="{ 'warn-text-show': error }"
+      >Please enter the value</span
+    >
+    <div class="search-input">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">
+          <mat-icon class="d-sm-none d-md-block">search</mat-icon>
+        </span>
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+          [(ngModel)]="value"
+        />
+        <span class="input-group-text" id="inputGroup-sizing-default">
+          <button type="button" (click)="onSearch()" class="btn btn-success">
+            Search
+          </button></span
+        >
+      </div>
+    </div>
+  </div>
+</div>

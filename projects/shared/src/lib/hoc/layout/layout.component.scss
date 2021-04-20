@@ -1,0 +1,13 @@
+@import "../../../../../../styles/app-all.scss";
+
+.content-view {
+  min-height: 82vh;
+  margin-left: 0px !important;
+  background-color: #f9f9f9;
+  background: url(/assets/Image/WavesPattern.svg);
+  background-size: 481px;
+  background-position-x: -46px;
+  background-position-y: 151px;
+  background-repeat: no-repeat;
+  z-index: 10;
+}

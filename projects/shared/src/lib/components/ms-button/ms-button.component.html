@@ -1,0 +1,8 @@
+<button
+  mat-raised-button
+  [disabled]="disabled"
+  [ngClass]="getButtonClasses()"
+  [type]="type"
+  (click)="onClick($event)">
+  <ng-content></ng-content>
+</button>

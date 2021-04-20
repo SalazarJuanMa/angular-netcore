@@ -1,0 +1,147 @@
+@import "../../../../../styles/app-setup.scss";
+
+$label-color: #6a6a6a;
+
+.j-center {
+  display: flex;
+  justify-content: center;
+
+  button {
+    margin: 5% 15% 0% 15%;
+  }
+}
+
+.wrapper {
+  margin: 0px !important;
+
+  .p-logo {
+    background-color: $app-primary-color;
+    width: 95.1%;
+
+    .p-logo-image {
+      background-color: $app-primary-color;
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+  }
+
+  .wave-pattern {
+    background-color: $app-primary-color;
+    width: 95.1%;
+    height: 100%;
+
+    .wave-pattern-image {
+      width: 90%;
+    }
+  }
+
+  .login-text {
+    position: absolute;
+    bottom: 10px;
+    color: #f2712a;
+    font-size: 24px;
+    letter-spacing: 38px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 93%;
+    font-weight: bold;
+  }
+
+  .sign-in-container {
+    .sign-in-text-container {
+      text-align: center;
+
+      .sign-in-text {
+        font-size: 48px;
+      }
+
+      .sign-in-credentials-info-text {
+        font-size: 12px;
+      }
+    }
+
+    .form-section {
+      margin-top: 20%;
+
+      .input-element {
+        width: 100%;
+        font-size: 14px;
+
+        .label-text {
+          font-size: 17px !important;
+          color: $label-color;
+        }
+
+        .input-field {
+          padding: 5px 0px;
+        }
+
+        .error {
+          font-size: 12px;
+        }
+      }
+
+      .login-button-container {
+        margin-top: 20%;
+         .login-sign-in-button {
+           width: 100%;
+         }
+      }
+    }
+
+    .footer-container {
+      bottom: 10px;
+      margin-top: 22%;
+      padding-left: 7%;
+    }
+  }
+}
+
+.row {
+  margin-right: 0px;
+}
+
+
+@media screen and (max-width: $screen-sm-max) {
+
+
+  .wrapper {
+    margin: 0px !important;
+
+    .p-logo {
+      background-color: $app-primary-color;
+      width: 95.1%;
+
+      .p-logo-image {
+        background-color: $app-primary-color;
+        margin-top: 10%;
+        margin-bottom: 10%;
+      }
+    }
+
+    .wave-pattern {
+      background-color:  $app-primary-color;
+      width: 95.1%;
+      height: 100%;
+
+      .wave-pattern-image {
+        width: 90%;
+      }
+    }
+
+    .login-text {
+      position: absolute;
+      bottom: 10px;
+      color: white;
+      font-size: 22px;
+      letter-spacing: 3px;
+      display: flex;
+      justify-content: unset;
+      text-align: unset;
+      width: 93%;
+    }
+
+  }
+
+}

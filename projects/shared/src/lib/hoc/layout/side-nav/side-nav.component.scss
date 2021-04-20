@@ -1,0 +1,74 @@
+@import "../../../../../../../styles/app-all.scss";
+
+.side-nav {
+  padding-top: $app-header-height;
+}
+
+.accordion {
+  .mat-expansion-panel-spacing {
+    margin: 0;
+  }
+
+  .mat-expansion-panel-header {
+    border-radius: 0px;
+    box-shadow: none;
+  }
+
+  .mat-accordion {
+    width: 100%;
+  }
+
+  .mat-accordion .mat-expansion-panel {
+    border-radius: 0px;
+    box-shadow: none;
+  }
+
+  .panel-title:hover {
+    color: $app-primary-color;
+    font-weight: 500;
+    .mat-expansion-indicator::after,
+    .mat-expansion-panel-header-description {
+      color: $app-primary-color !important;
+    }
+  }
+}
+
+.logout {
+  font-size: 12px;
+  font-weight: bold;
+  color: $app-primary-color;
+}
+
+.logout-icon {
+  font-size: 16px;
+  width: 18px;
+  transform: translateY(4px);
+  color: $app-primary-color;
+}
+
+.sub-nav-item {
+  padding: 5px 15px;
+  font-size: 13px;
+}
+
+.sub-nav-item:hover {
+  background-color: $app-primary-color;
+  color: #ffffff;
+}
+
+.user-details-container {
+  border-bottom: 1px solid $app-primary-color;
+  border-color: $app-primary-color !important;
+  text-align: center !important;
+  padding: 15px 0px;
+  .user-icon {
+    font-size: 50px !important;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  .user-text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}

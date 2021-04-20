@@ -1,0 +1,128 @@
+<div class="wrapper">
+  <div class="row">
+    <div class="col-4">
+      <div class="j-center p-logo">
+        <img
+          class="p-logo-image"
+          src="../../../../../assets/Image/ms.png"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="wave-pattern">
+        <img
+          class="wave-pattern-image"
+          src="../../../../../assets/Image/WavesPatternWhite.svg"
+        />
+      </div>
+      <div class="login-text">
+        <p>
+          {{ templateContentConst.LOGIN_APP }}
+        </p>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 cold-sm-8 sign-in-container">
+          <div class="sign-in-text-container">
+            <div class="sign-in-text">
+              <b>{{ templateContentConst.SIGNIN_TEXT }}</b>
+            </div>
+            <div class="sign-in-credentials-info-text">
+              Please enter your credentials to get access to your account
+            </div>
+          </div>
+
+          <div class="form-section" id="formsectoin">
+            <form [formGroup]="loginForm" (ngSubmit)="submit()" #loginform>
+              <p>
+                <mat-form-field class="input-element" floatLabel="always">
+                  <mat-label class="label-text">{{
+                    templateContentConst.USERNAME
+                  }}</mat-label>
+                  <input
+                    class="input-field"
+                    type="text"
+                    matInput
+                    formControlName="userName"
+                    #username
+                  />
+                  <mat-error
+                    *ngIf="submitted && form.userName.errors?.required"
+                    class="error"
+                  >
+                    {{ errorMsgConst.REQUIRED.USERNAME }}
+                    <span class="float-right">
+                      <mat-icon
+                        class="material-icons-outlined"
+                        aria-hidden="false"
+                        aria-label="warning"
+                      >
+                        {{ iconConst.WARNING }}
+                      </mat-icon>
+                    </span>
+                  </mat-error>
+                  <mat-error
+                    *ngIf="submitted && form.userName.errors?.minlength"
+                    class="error"
+                  >
+                    {{ errorMsgConst.MINLENGTH.USERNAME }}
+                    <span class="float-right">
+                      <mat-icon
+                        class="material-icons-outlined"
+                        aria-hidden="false"
+                        aria-label="warning"
+                      >
+                        {{ iconConst.WARNING }}
+                      </mat-icon>
+                    </span>
+                  </mat-error>
+                </mat-form-field>
+              </p>
+              <p>
+                <mat-form-field class="input-element" floatLabel="always">
+                  <mat-label class="label-text">{{
+                    templateContentConst.PASSWORD
+                  }}</mat-label>
+                  <input
+                    class="input-field"
+                    type="password"
+                    matInput
+                    formControlName="password"
+                    #password
+                  />
+                  <mat-error
+                    *ngIf="submitted && form.password.errors?.required"
+                    class="error"
+                  >
+                    {{ errorMsgConst.REQUIRED.PASSWORD }}
+                    <span class="float-right">
+                      <mat-icon
+                        class="material-icons-outlined"
+                        aria-hidden="false"
+                        aria-label="warning"
+                      >
+                        {{ iconConst.WARNING }}
+                      </mat-icon>
+                    </span>
+                  </mat-error>
+                </mat-form-field>
+              </p>
+              <div class="j-center login-button-container">
+                <lib-ms-button size="wide" type="submit" class="login-sign-in-button">
+                  {{ templateContentConst.SIGNIN }}
+                </lib-ms-button>
+              </div>
+            </form>
+          </div>
+          <div class="footer-container">
+            <lib-footer></lib-footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+@import "../../../../../../styles/app-setup.scss";
+
+$screen-sm-max: 540px;
+$screen-md-max: 780px;
+
+::ng-deep.mat-dialog-container {
+  padding: 0px !important;
+  outline: none !important;
+  outline-style: none !important;
+  border-radius: 0px !important;
+  .mat-card {
+    width: 535px;
+
+    .confirmation-title {
+      padding-top: 3% !important;
+      width: 90% !important;
+      margin-left: 3.6% !important;
+      margin-bottom: 4px;
+      font-size: 16px !important;
+      font-weight: bold;
+      font-weight: 600;
+    }
+    .confirmation-text {
+      margin-left: 3.6% !important;
+      font-size: 13px !important;
+      width: 95%;
+    }
+    .dialog-options {
+      margin-bottom: 7px;
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+    }
+    .mat-button-focus-overlay {
+      background: #ffffff !important;
+    }
+    .dismiss-icon {
+      opacity: 1;
+      outline: none !important;
+      font-size: 18px !important;
+      font-family: Arial;
+      font-size: 9px;
+      color: $app-primary-color;
+      width: 2%;
+      position: absolute;
+      right: 15px;
+      transform: translateY(3px);
+    }
+    .material-icons {
+      font-size: 16px !important;
+    }
+    .glyphicon {
+      color: $app-primary-color;
+      padding-right: 3px;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  .mat-card {
+    width: 100% !important;
+    .dialog-options {
+      display: block;
+
+      lib-ms-button {
+        padding: 5px 0px;
+      }
+    }
+    .confirmation-text {
+      margin-left: 0.6% !important;
+      font-size: 13px !important;
+      width: 100%;
+    }
+    .confirmation-title {
+      margin-left: 0.6% !important;
+      margin-bottom: 4px;
+    }
+  }
+}

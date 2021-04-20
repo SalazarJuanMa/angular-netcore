@@ -1,0 +1,53 @@
+<mat-drawer-container>
+  <mat-drawer
+    #sidenav
+    class="side-nav"
+    mode="over"
+    position="end"
+    autosize="true"
+  >
+    <div class="user-details-container">
+      <mat-icon class="user-icon">{{ icon.PAGE_MENU_USER_ACCOUNT }}</mat-icon>
+      <div class="user-text">{{ User === null ? "User" : User }}</div>
+
+      <div *ngIf="showLogOutButton">
+        <div class="logout" (click)="logout()">
+          <span>
+            <mat-icon
+              class="logout-icon"
+              aria-hidden="false"
+              aria-label="Log Out"
+            >
+              {{ icon.SIGN_OUT }}</mat-icon
+            >
+          </span>
+          <span> {{ templateContent.SIGN_OUT }} </span>
+        </div>
+      </div>
+    </div>
+    <div class="accordion">
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let navItem of navigation" #panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title class="panel-title">
+              {{ navItem.NAV_ITEM }}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div>
+            <div
+              *ngFor="let subNavItem of navItem.SUB_NAV_ITEM"
+              class="sub-nav-item"
+              (click)="Route(subNavItem.SUB_NAV_LINK)"
+            >
+              {{ subNavItem.SUB_NAV_NAME }}
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <ng-content select="[content]"></ng-content>
+  </mat-drawer-content>
+</mat-drawer-container>

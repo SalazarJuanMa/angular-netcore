@@ -1,0 +1,36 @@
+@import "../../../../../../styles/app-setup.scss";
+
+.alert-danger {
+  background-color: $app-primary-color;
+  width: 100%;
+  border-radius: 0px;
+  position: fixed;
+  z-index: 3;
+
+  .error-text {
+    font-family: Arial;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    width: 98%;
+  }
+
+  .dismiss-icon {
+    opacity: 1;
+    outline: none !important;
+    font-size: 18px !important;
+    font-family: Arial;
+    font-size: 24px;
+    color: #ffffff;
+    width: 2%;
+    transform: translateY(3px);
+    cursor: pointer;
+  }
+}
+
+.center {
+  display: flex !important;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+}

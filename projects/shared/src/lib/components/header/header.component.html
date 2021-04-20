@@ -1,0 +1,73 @@
+<div class="header" *ngIf="showHeader">
+  <mat-toolbar [class.box-shadow]="showBoxShadow">
+    <mat-toolbar-row class="toolbar-row">
+      <div class="logo-section">
+        <a href=""><img class="logo" src="assets\Image\monkey.svg" /> </a>
+        <span class="app-title-container">
+          <span class="app-name">{{ templateContent.MAIN_SCREEN }}</span>
+        </span>
+      </div>
+
+      <div class="d-flex">
+        <div class="nav-section" *ngIf="showMenuOptions">
+          <div class="d-none d-lg-block d-md-none">
+            <lib-menu-item *ngFor="let navItem of navigation">
+              <span trigger *ngIf="navItem.DESKTOP_VIEW">{{
+                navItem.NAV_ITEM
+              }}</span>
+              <span content *ngIf="navItem.DESKTOP_VIEW">
+                <span
+                  mat-menu-item
+                  *ngFor="let subNavitem of navItem.SUB_NAV_ITEM"
+                  (click)="Route(subNavitem.SUB_NAV_LINK)"
+                  >{{ subNavitem.SUB_NAV_NAME }}</span
+                >
+              </span>
+            </lib-menu-item>
+          </div>
+        </div>
+        <div
+          id="action-section"
+          class="action-section"
+          *ngIf="showMenuOptions"
+        >
+          <div class="d-none d-lg-block d-md-none logout">
+            <span class="user-name-logout">
+              <div class="user-text">{{ User === null ? "User" : User }}</div>
+              <div class="logout-lg cursor" (click)="logout()">
+                <span>
+                  <mat-icon
+                    class="logout-icon"
+                    aria-hidden="false"
+                    aria-label="Log Out"
+                  >
+                    {{ icon.SIGN_OUT }}</mat-icon
+                  >
+                </span>
+                <span>
+                  {{ templateContent.SIGN_OUT }}
+                </span>
+              </div>
+            </span>
+            <span>
+              <mat-icon class="user-icon">{{
+                icon.PAGE_MENU_USER_ACCOUNT
+              }}</mat-icon>
+            </span>
+          </div>
+          <div class="d-lg-none nav-icon">
+            <button
+              mat-icon-button
+              (click)="openSideNav()"
+              overlapTrigger="true"
+            >
+              <mat-icon class="menu" aria-hidden="false" aria-label="menu">
+                {{ icon.PAGE_MENU }}
+              </mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

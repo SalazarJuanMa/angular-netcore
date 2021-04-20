@@ -1,0 +1,22 @@
+
+
+  <div class="wrapper">
+    <div class="content-wrapper">
+      <h2 class="visible-md visible-lg heading-md">Main applications</h2>
+      <h2 class="visible-md heading">{{templateContent.WELCOME_MESSAGE}}</h2>
+      <p class="d-sm-block d-md-none info">{{templateContent.SELECT_OPTION}}</p>
+      <div class="row margin-lg">
+
+        <div class="col-lg-3 col-md-12 center" [ngClass] = "[thumbnail.text === 'Inventory Maintenance' ? 'thumbnail-inventory' : 'col-lg-3 col-md-12 center']" *ngFor="let thumbnail of thumbnails">
+          <div class="thumbnail"  (click)="this.navigateToMSSetup(thumbnail.navigateTo, thumbnail.navigate)">
+            <div class="icon-box">
+              <mat-icon class="thumbnail-icon" aria-hidden="false" aria-label="launch sheet">
+                {{thumbnail.icon}}
+              </mat-icon>
+            </div>
+            <div class="thumbnail-text">{{thumbnail.text}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
